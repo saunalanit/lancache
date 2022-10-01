@@ -1,5 +1,5 @@
 version: '2'
-x-restart-policy: &restart-policy "no"
+x-restart-policy: &restart-policy "always"
 services:
   dns:
     image: lancachenet/lancache-dns:latest
@@ -29,3 +29,4 @@ services:
     volumes:
       - ${CACHE_ROOT}/cache:/data/cache
       - ${CACHE_ROOT}/logs:/data/logs
+
